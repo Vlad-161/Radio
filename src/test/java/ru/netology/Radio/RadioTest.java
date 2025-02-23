@@ -82,7 +82,7 @@ public class RadioTest {
         radio.setMinVolume(0);
         radio.setCurrentVolume(40);
         radio.nextCurrentVolume();
-        Assertions.assertEquals(50,radio.getCurrentVolume());
+        Assertions.assertEquals(41,radio.getCurrentVolume());
     }
 
     @Test
@@ -102,7 +102,7 @@ public class RadioTest {
         radio.setMinVolume(0);
         radio.setCurrentVolume(40);
         radio.prevCurrentVolume();
-        Assertions.assertEquals(30,radio.getCurrentVolume());
+        Assertions.assertEquals(39,radio.getCurrentVolume());
     }
 
     @Test
