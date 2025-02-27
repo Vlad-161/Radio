@@ -10,6 +10,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setMaxStation(9);
         radio.setMinStation(0);
+        radio.setNumberStation(6);
         radio.setCurrentStation(4);
         radio.nextCurrentStation();
         Assertions.assertEquals(5,radio.getCurrentStation());
@@ -30,6 +31,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setMaxStation(9);
         radio.setMinStation(0);
+        radio.setNumberStation(6);
         radio.setCurrentStation(4);
         radio.prevCurrentStation();
         Assertions.assertEquals(3,radio.getCurrentStation());
@@ -40,6 +42,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setMaxStation(9);
         radio.setMinStation(0);
+        radio.setNumberStation(6);
         radio.setCurrentStation(0);
         radio.prevCurrentStation();
         Assertions.assertEquals(9, radio.getCurrentStation());
@@ -134,6 +137,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setMaxStation(9);
         radio.setMinStation(0);
+        radio.setNumberStation(9);
         radio.setCurrentStation(8);
         radio.setCurrentStation(60);
         Assertions.assertEquals(8, radio.getCurrentStation());
@@ -144,6 +148,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setMaxStation(9);
         radio.setMinStation(0);
+        radio.setNumberStation(9);
         radio.setCurrentStation(8);
         radio.setCurrentStation(-1);
         Assertions.assertEquals(8, radio.getCurrentStation());
@@ -181,6 +186,31 @@ public class RadioTest {
         radio.setCurrentVolume(70);
         radio.setCurrentVolume(-1);
         Assertions.assertEquals(70, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void setNumberStationTestNormalNumber(){
+        Radio radio = new Radio();
+        radio.setNumberStation(9);
+        Assertions.assertEquals(8,radio.getNumberStation());
+    }
+
+    @Test
+    public void setNumberStationTestOverMaxNumber(){
+        Radio radio = new Radio();
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setNumberStation(19);
+        Assertions.assertEquals(9,radio.getNumberStation());
+    }
+
+    @Test
+    public void setNumberStationTestUnderMinNumber(){
+        Radio radio = new Radio();
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setNumberStation(-4);
+        Assertions.assertEquals(0,radio.getNumberStation());
     }
 
 }
