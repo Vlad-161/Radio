@@ -213,4 +213,14 @@ public class RadioTest {
         Assertions.assertEquals(0,radio.getNumberStation());
     }
 
+    @Test
+    public void TestNew(){
+        Radio radio = new Radio(19);
+        radio.setMaxStation(19);
+        radio.setMinStation(0);
+        radio.setCurrentStation(15);
+
+        Assertions.assertEquals(15, radio.getCurrentStation() );
+    }
+
 }
