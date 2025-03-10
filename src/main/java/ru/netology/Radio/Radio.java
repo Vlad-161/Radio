@@ -13,11 +13,13 @@ public class Radio {
     //Радиостанции
 
 
-    public Radio(int numberStation) {
+    public Radio(int numberStation, int currentStation) {
         this.numberStation = numberStation;
-    }
-    public Radio() {
+        this.currentStation = currentStation;
 
+    }
+
+    public Radio() {
     }
 
     public int getMaxStation() {

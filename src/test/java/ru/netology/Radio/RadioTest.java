@@ -212,15 +212,11 @@ public class RadioTest {
         radio.setNumberStation(-4);
         Assertions.assertEquals(0,radio.getNumberStation());
     }
-
     @Test
-    public void TestNew(){
-        Radio radio = new Radio(19);
-        radio.setMaxStation(19);
-        radio.setMinStation(0);
-        radio.setCurrentStation(15);
+    public void newTest(){
+        Radio radio = new Radio(20, 15);
 
-        Assertions.assertEquals(15, radio.getCurrentStation() );
+        Assertions.assertEquals(15, radio.getCurrentStation());
     }
 
 }
