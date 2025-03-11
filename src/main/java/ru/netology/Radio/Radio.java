@@ -13,10 +13,8 @@ public class Radio {
     //Радиостанции
 
 
-    public Radio(int numberStation, int currentStation) {
+    public Radio(int numberStation) {
         this.numberStation = numberStation;
-        this.currentStation = currentStation;
-
     }
 
     public Radio() {
