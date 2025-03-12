@@ -215,9 +215,10 @@ public class RadioTest {
 
     @Test
     public void test(){
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(15);
 
-        Assertions.assertEquals(10, radio.getNumberStation());
+        Assertions.assertEquals(15, radio.getCurrentStation());
     }
 
 }
