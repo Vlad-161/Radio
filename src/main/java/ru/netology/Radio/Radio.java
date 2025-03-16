@@ -15,9 +15,11 @@ public class Radio {
 
     public Radio(int numberStation) {
         this.numberStation = numberStation;
+
     }
 
     public Radio() {
+
     }
 
     public int getMaxStation() {
