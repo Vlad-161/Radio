@@ -14,11 +14,12 @@ public class Radio {
 
 
     public Radio(int numberStation) {
-        this.numberStation = numberStation;
+        this.maxStation = numberStation - 1;
 
     }
 
     public Radio() {
+        this.maxStation = 9;
 
     }
 
@@ -65,6 +66,7 @@ public class Radio {
         if (currentStation < minStation) {
             return;
         }
+
         this.currentStation = currentStation;
     }
 

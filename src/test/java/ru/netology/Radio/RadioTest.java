@@ -216,8 +216,6 @@ public class RadioTest {
     @Test
     public void test(){
         Radio radio = new Radio(20);
-        radio.setMaxStation(19);
-        radio.setMinStation(0);
         radio.setCurrentStation(15);
 
         Assertions.assertEquals(15, radio.getCurrentStation());
